@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServer", "samples\Bla
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedModels", "samples\Shared\SharedModels\SharedModels.csproj", "{42276235-5139-41D6-923D-18B7EB5E3E44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazored.FluentValidation.Tests", "Blazored.FluentValidation.Tests\Blazored.FluentValidation.Tests.csproj", "{34536102-B901-4A03-A20B-A681F2CE9F07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,18 @@ Global
 		{42276235-5139-41D6-923D-18B7EB5E3E44}.Release|x64.Build.0 = Release|Any CPU
 		{42276235-5139-41D6-923D-18B7EB5E3E44}.Release|x86.ActiveCfg = Release|Any CPU
 		{42276235-5139-41D6-923D-18B7EB5E3E44}.Release|x86.Build.0 = Release|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Debug|x64.Build.0 = Debug|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Debug|x86.Build.0 = Debug|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Release|x64.ActiveCfg = Release|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Release|x64.Build.0 = Release|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Release|x86.ActiveCfg = Release|Any CPU
+		{34536102-B901-4A03-A20B-A681F2CE9F07}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

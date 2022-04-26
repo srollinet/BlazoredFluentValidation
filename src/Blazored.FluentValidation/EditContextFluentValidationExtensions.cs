@@ -26,7 +26,7 @@ namespace Blazored.FluentValidation
             var messages = new ValidationMessageStore(editContext);
 
             editContext.OnValidationRequested +=
-                (sender, eventArgs) => ValidateModel((EditContext)sender, messages, serviceProvider, disableAssemblyScanning, fluentValidationValidator, validator);
+                (sender, eventArgs) => ValidateModel((EditContext)sender, messages, serviceProvider, disableAssemblyScanning, fluentValidationValidator?.Options, validator);
 
             editContext.OnFieldChanged +=
                 (sender, eventArgs) => ValidateField(editContext, messages, eventArgs.FieldIdentifier, serviceProvider, disableAssemblyScanning, validator);
@@ -38,14 +38,14 @@ namespace Blazored.FluentValidation
                                                 ValidationMessageStore messages,
                                                 IServiceProvider serviceProvider,
                                                 bool disableAssemblyScanning,
-                                                FluentValidationValidator fluentValidationValidator,
+                                                Action<ValidationStrategy<object>> options,
                                                 IValidator validator = null)
         {
             validator ??= GetValidatorForModel(serviceProvider, editContext.Model, disableAssemblyScanning);
 
             if (validator is object)
             {
-                var context = ValidationContext<object>.CreateWithOptions(editContext.Model, fluentValidationValidator.Options ?? (opt => opt.IncludeAllRuleSets()));
+                var context = ValidationContext<object>.CreateWithOptions(editContext.Model, options ?? (opt => opt.IncludeAllRuleSets()));
 
                 var validationResults = await validator.ValidateAsync(context);
 
